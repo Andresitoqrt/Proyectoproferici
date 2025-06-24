@@ -1,0 +1,101 @@
+<!-- admin.html -->
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Productos</title>
+  <!-- Pico.css -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css" />
+  <!-- estilos compartidos -->
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- estilos específicos de admin -->
+  <link rel="stylesheet" href="css/Productos.css" />
+</head>
+
+<body>
+<header>
+    <div class="upper-bar">
+    <div class="left-icon">
+      <img src="Imagenes/imagen_2025-06-12_190300791-removebg-preview.png" alt="Logo" class="logo" >
+    </div>
+ 
+    <header class="top-bar">
+    <div class="nav-links">
+        <li><a href="Index.html">INICIO</a></li>
+      <li><a href="Productos.html">MEN</a></li>
+      <li><a href="Productos.html">WOMEN</a></li>
+      <li><a href="Productos.html">KIDS</a></li>
+      <li><a href="Productos.html">SALES</a></li>
+      <li><a href="Productos.html">TRENDING</a></li>
+    </div>
+    <div class="right-icons">
+      <input type="text" class="search-input" placeholder="">  
+    </div>
+  </header>
+ 
+  <div class="sub-bar">
+    <p>Free delivery & returns</p>
+  </div>
+</header>
+    
+
+  <main class="container">
+    <h1>Productos Disponibles</h1>
+
+    <!-- Formulario -->
+    <form id="Marca-form">
+      <div class="flex">
+        <label for="name">Marca:
+          <input type="text" id="name" required />
+        </label>
+        <label for="price">Precio:
+          <input type="number" id="price" required />
+        </label>
+        <label for="name_product">Nombre Producto:
+            <input type="text" id="name_product" required />
+          </label>
+        <label for="imagen-file">Imagen:
+          <input type="file" id="imagen-file" accept="image/*" />
+        </label>
+      </div>
+      <input type="hidden" id="imagen-url" />
+      <input type="hidden" id="product-id" />
+      <button type="submit" id="btn-submit">Agregar</button>
+      <button type="button" id="btn-cancel" hidden>Cancelar</button>
+    </form>
+
+    <hr/>
+
+    <!-- Tabla de personas -->
+    <table>
+      <thead>
+        <tr>
+          <th>Imagen</th>
+          <th>Brand</th>
+          <th>Price</th>
+          <th>Products name</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody id="product-tbody">
+        <!-- inyectado por script -->
+      </tbody>
+    </table>
+  </main>
+
+  <footer class="container">
+    <p>
+
+        Spartan Clothing S.A. de C.V. © 2023. All rights reserved.
+        Location: Apopa, San Salvador, El Salvador.
+        
+        </p>
+  </footer>
+
+  <script src="js/Productos.js"></script>
+</body>
+
+</html>
+

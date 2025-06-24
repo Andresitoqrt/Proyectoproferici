@@ -1,0 +1,245 @@
+body {
+  margin: 0;
+  font-family: 'Anton', sans-serif;
+}
+
+.top-bar {
+  background-color: #08310d;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  position: relative;
+  height: 60px;
+}
+
+.left-icon {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 40px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li{
+  list-style: none;
+}
+
+.nav-links a {
+  color: #f5d200;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.right-icons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.search-input {
+  padding: 5px;
+  border-radius: 20px;
+  border: none;
+  width: 150px;
+}
+
+.icon {
+  font-size: 18px;
+  color: #d4a524;
+  cursor: pointer;
+}
+
+.top-links {
+  position: absolute;
+  top: 5px;
+  right: 20px;
+  font-size: 12px;
+}
+
+.top-links a {
+  color: #f5d200;
+  text-decoration: none;
+  margin-left: 10px;
+}
+
+.sub-bar {
+  background-color: #1b4a19;
+  color: #f5d200;
+  text-align: center;
+  padding: 5px 0;
+  font-size: 14px;
+}
+
+.upper-bar {
+  background-color: #1b4a19;
+  color: #f5d200;
+  text-align: center;
+  padding: 5px 0;
+  font-size: 14px;
+}
+
+.navbar {
+  background-color: #08310d;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.menu-btn {
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  margin-right: 1rem;
+}
+
+.logo {
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 240px;
+  height: 100%;
+  background-color: #1e1e2f;
+  box-shadow: 2px 0 12px rgba(0, 0, 0, 0.5);
+  padding: 1.5rem 1rem;
+  transition: left 0.3s ease;
+  z-index: 1000;
+}
+
+.sidebar.active {
+  left: 0;
+}
+
+.sidebar-header h2 {
+  margin: 0 0 2rem 0;
+  color: #fff;
+}
+
+.sidebar nav a {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 0;
+  color: #ddd;
+  text-decoration: none;
+}
+
+.sidebar nav a:hover {
+  background-color: #2c2c3f;
+  border-radius: 5px;
+}
+
+.icon {
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 999;
+}
+
+.overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.container-cards{
+    display: flex;
+    place-items: center;
+}
+
+h1 {
+  text-align: center;
+  /* centrar texto */
+  margin-bottom: 1.5rem;
+  /* espacio abajo */
+}
+
+/* Contenedor de tarjetas usando Flexbox */
+.cards-grid {
+  display: flex;
+  /* flexbox */
+  flex-wrap: wrap;
+  /* permitir salto */
+  gap: 1.5rem;
+  /* separación */
+  justify-content: center;
+  /* centrar items */
+  margin: 0 auto;
+  /* centrar contenedor */
+}
+
+/* Estilo de cada tarjeta */
+.card {
+  flex: 1 1 220px;
+  /* crecimiento flexible */
+  max-width: 300px;
+  /* ancho máximo */
+  border: 1px solid #ddd;
+  /* borde claro */
+  border-radius: 8px;
+  /* esquinas redondeadas */
+  padding: 1rem;
+  /* espacio interno */
+  text-align: center;
+  /* centrar texto */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  /* sombra sutil */
+  transition: transform .2s;
+  /* animación suave */
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  /* elevar al pasar */
+}
+
+.card img {
+  width: 100%;
+  /* ancho completo */
+  height: 160px;
+  /* altura fija */
+  object-fit: cover;
+  /* recortar proporción */
+  border-radius: 4px;
+  /* esquinas pequeñas */
+  margin-bottom: 0.75rem;
+  /* espacio abajo */
+}
+
+.card h2 {
+  font-size: 1.25rem;
+  /* tamaño título */
+  margin: 0.5rem 0 0.25rem;
+  /* márgenes verticales */
+}
+
+.card p {
+  margin: 0.25rem 0;
+  /* márgenes verticales */
+  color: #555;
+  /* texto atenuado */
+  font-size: 0.95rem;
+  /* tamaño cuerpo */
+}
